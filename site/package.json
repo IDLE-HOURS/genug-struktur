@@ -1,8 +1,8 @@
 {
-  "name": "wastenot",
+  "name": "enoughstructures",
   "version": "1.0.0",
-  "description": "Waste Not Website",
-  "author": "Kevin Green",
+  "description": "enoughstructures.net",
+  "author": "Asher Caplan",
   "license": "MIT",
   "scripts": {
     "clean": "run-s clean:*",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wastenotworld/site"
+    "url": "https://github.com/idle-hours/site"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.8.3",
