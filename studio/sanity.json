@@ -5,7 +5,7 @@
     "projectId": "1icbg3cf"
   },
   "project": {
-    "name": "wastenot"
+    "name": "enoughstructures"
   },
   "plugins": [
     "@sanity/base",

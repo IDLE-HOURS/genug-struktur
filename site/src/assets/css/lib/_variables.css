@@ -3,7 +3,7 @@
 /* colours */
 :root {
   --white: #F7F5EE;
-  --green: #FF6633;
+  --orange: #FF6633;
   --litegreen: #8CD08C;
   --blue: #8DD1D3;
   --purple: #F3D8EC;
@@ -33,7 +33,7 @@
 }
 
 .bcg {
-  background-color: var(--green);
+  background-color: var(--orange);
 }
 
 .bcp {
@@ -45,7 +45,7 @@
 }
 
 .cg {
-  color: var(--green);
+  color: var(--orange);
 }
 
 .o6 { opacity: 0.6; }

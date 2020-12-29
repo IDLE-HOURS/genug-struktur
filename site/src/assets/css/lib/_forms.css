@@ -21,7 +21,7 @@
     }
     input:checked + span {
       &:before {
-        background-color: var(--green);
+        background-color: var(--orange);
       }
     }
   }

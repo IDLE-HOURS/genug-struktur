@@ -7,7 +7,7 @@
         height: 100%;
         content: '';
         position: absolute;
-        background-color: var(--green);
+        background-color: var(--orange);
       }
       &:after {
         width: 70%;

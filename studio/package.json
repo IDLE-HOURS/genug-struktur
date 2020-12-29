@@ -1,10 +1,10 @@
 {
-  "name": "spaghetti",
+  "name": "enoughstructures",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Kevin Green <kevin@thecouch.nyc>",
+  "author": "Asher Caplan <ashercaplan.studio@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
