@@ -13,7 +13,7 @@ export default {
       { value: 'home-compostable', title: 'Home Compostable' },
       { value: 'renewed-material', title: 'Renewed Material' },
       { value: 'bio-based', title: 'Bio-Based' },
-      { value: 'dissolvable', title: 'Dissolvable' },
+      { value: 'regenerative', title: 'regenerative' },
       { value: 'recyclable', title: 'Recyclable' },
     ],
     layout: 'tags'

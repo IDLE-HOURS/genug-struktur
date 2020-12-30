@@ -12,7 +12,7 @@ const sanityClient = require("@sanity/client");
  */
 
 const config = {
-  projectId: '6963fx24',
+  projectId: '1icbg3cf',
   dataset: 'production',
   useCdn: true
 }

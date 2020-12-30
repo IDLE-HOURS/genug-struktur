@@ -51,7 +51,7 @@ Include an additional description here to clarify any of the information below
 - [ ] Home Compostable
 - [ ] Renewed Material
 - [ ] Bio Based
-- [ ] Dissolvable
+- [ ] regenerative
 - [ ] Recycable
 
 ### Tags (Optional)

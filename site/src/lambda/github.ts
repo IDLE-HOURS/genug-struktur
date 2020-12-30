@@ -77,7 +77,7 @@ ${data.minimums}
 - [${data.homeCompostable === 'true' ? 'x' : ' '}] Home Compostable
 - [${data.renewedMaterial === 'true' ? 'x' : ' '}] Renewed Material
 - [${data.bioBased === 'true' ? 'x' : ' '}] Bio Based
-- [${data.dissolvable === 'true' ? 'x' : ' '}] Dissolvable
+- [${data.regenerative === 'true' ? 'x' : ' '}] regenerative
 - [${data.recyclable === 'true' ? 'x' : ' '}] Recycable
 
 ### Tags (Optional)
