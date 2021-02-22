@@ -57,7 +57,7 @@
     "luxon": "^1.16.0",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.7",
-    "netlify-cli": "^2.69.11",
+    "netlify-cli": "^3.8.4",
     "netlify-lambda": "^2.0.1",
     "operator": "^1.6.1",
     "picoapp": "^3.6.1",

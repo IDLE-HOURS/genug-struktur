@@ -15,7 +15,7 @@ const theme = () => {
 }
 
 document.addEventListener('DOMContentLoaded', e => {
-  console.log('🍝 Built by Kevin Green');
+  console.log('Join the Computing Coop on Are.na');
   app.mount()
   theme()
 

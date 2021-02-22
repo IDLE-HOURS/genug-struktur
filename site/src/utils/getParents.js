@@ -14,12 +14,12 @@ function generateCategory (category) {
 
 function handleKey (key) {
   switch (key) {
-    case 'packaging':
-      return 'Packing'
-    case 'interior':
-      return 'Interior'
-    case 'fashion':
-      return 'Fashion and soft goods'
+    case 'materials':
+      return 'Materials'
+    case 'people':
+      return 'Industry People'
+    case 'designs':
+      return 'Designs'
     default:
       return null
   }

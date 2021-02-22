@@ -24,9 +24,9 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'packaging', title: 'Packaging' },
-          { value: 'fashion', title: 'Fashion and soft goods' },
-          { value: 'interior', title: 'Interior' }
+          { value: 'material', title: 'Materials' },
+          { value: 'people', title: 'Industry People' },
+          { value: 'design', title: 'Design' }
         ],
         layout: 'dropdown'
       }
