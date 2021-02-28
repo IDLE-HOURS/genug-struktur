@@ -24,7 +24,7 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'material', title: 'Materials' },
+          { value: 'materials', title: 'Materials' },
           { value: 'people', title: 'Industry People' },
           { value: 'design', title: 'Design' }
         ],

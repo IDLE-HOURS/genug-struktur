@@ -11,7 +11,7 @@
       }
     }
     @media (min-width: 800px) {
-      border-bottom: none;
+      border-bottom: 1px solid black;
       border-right: 1px solid black;
       padding: 3rem 2rem;
       &:last-child {
