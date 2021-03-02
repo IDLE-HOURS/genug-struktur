@@ -46,6 +46,7 @@
 
 .cg {
   color: var(--orange);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .o6 { opacity: 0.6; }
