@@ -1,5 +1,3 @@
-# Spaghetti 
-
 ## Prerequisites
 
 - [Node and NPM](https://nodejs.org/)

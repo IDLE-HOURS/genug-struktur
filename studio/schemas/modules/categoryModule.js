@@ -24,9 +24,10 @@ export default {
       type: 'string',
       options: {
         list: [
-          { value: 'materials', title: 'Materials' },
-          { value: 'people', title: 'Industry People' },
-          { value: 'design', title: 'Design' }
+          { value: 'material', title: 'Materials' },
+          { value: 'person', title: 'People' },
+          { value: 'project', title: 'Projects' },
+          { value: 'system', title: 'Systems' }
         ],
         layout: 'dropdown'
       }
