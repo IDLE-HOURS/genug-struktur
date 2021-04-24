@@ -16,6 +16,7 @@ module.exports = function(config) {
   config.addLayoutAlias('default', 'layouts/base.njk');
 
   config.addPassthroughCopy("./src/site/manifest.json");
+  config.addPassthroughCopy("./src/site/fonts");
 
   // service workers
   if (env !== undefined) {
