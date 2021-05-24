@@ -50,21 +50,3 @@
 }
 
 .o6 { opacity: 0.6; }
-
-@font-face {
-  font-family: 'SometimesTimes';
-  src: url('../../../site/fonts/SometimesTimes.woff2') format('woff2'),
-    url('../../../site/fonts/SometimesTimes.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'YoungSerif-Regular';
-  src: url('../../../site/fonts/YoungSerif-Regular.woff2') format('woff2'),
-    url('../../../site/fonts/YoungSerif-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
