@@ -1,7 +1,22 @@
+@font-face {
+  font-family: 'Fellix-Light';
+  src: url('/../site/fonts/FellixTRIAL-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
+@font-face {
+  font-family: 'YoungSerif-Regular';
+  src: url('/../site/fonts/YoungSerif-Regular.woff2') format('woff2'),
+    url('/../site/fonts/YoungSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
-  font-family: 'YoungSerif-Regular','Helvetica Neue';
+  font-family: 'Fellix-Light','Helvetica Neue';
   text-align: center;
   font-size: 14px;
   line-height: 1.8;
@@ -9,11 +24,11 @@ body {
 }
 
 .serif {
-  font-family: 'SometimesTimes','Times New Roman';
+  font-family: 'YoungSerif-Regular','Times New Roman';
 }
 
 .helv {
-  font-family: 'YoungSerif-Regular','Helvetica Neue';
+  font-family: 'Fellix-Light','Helvetica Neue';
 }
 
 .medium {
@@ -263,20 +278,4 @@ ul, ol {
 .bold {
   font-weight: 500;
 } 
-@font-face {
-  font-family: 'SometimesTimes';
-  src: url('../fonts/SometimesTimes.woff2') format('woff2'),
-    url('../fonts/SometimesTimes.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'YoungSerif-Regular';
-  src: url('../fonts/YoungSerif-Regular.woff2') format('woff2'),
-    url('../fonts/YoungSerif-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
