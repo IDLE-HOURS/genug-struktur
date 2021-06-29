@@ -1,4 +1,4 @@
 module.exports = {
-  "rootUrl" : "https://wastenot.world",
+  "rootUrl" : "https://enoughstructures.com",
   "buildTime" : new Date()
 }
