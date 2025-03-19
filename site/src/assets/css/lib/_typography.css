@@ -1,22 +1,23 @@
 @font-face {
-  font-family: 'Fellix-Light';
-  src: url('/../site/fonts/FellixTRIAL-Light.woff') format('woff');
+  font-family: 'ABCDiatype-Regular';
+  src: url('/../site/fonts/ABCDiatype-Regular.woff') format('woff'),
+       url('/../site/fonts/ABCDiatype-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'YoungSerif-Regular';
-  src: url('/../site/fonts/YoungSerif-Regular.woff2') format('woff2'),
-    url('/../site/fonts/YoungSerif-Regular.woff') format('woff');
+  font-family: 'ABCDiatypeMono-Regular';
+  src: url('/../site/fonts/ABCDiatypeMono-Regular.woff2') format('woff2'),
+       url('/../site/fonts/ABCDiatypeMono-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: 'Fellix-Light','Helvetica Neue';
+  font-family: 'ABCDiatype-Regular','Helvetica Neue';
   text-align: center;
   font-size: 14px;
   line-height: 1.8;
@@ -24,11 +25,11 @@ body {
 }
 
 .serif {
-  font-family: 'YoungSerif-Regular','Courier New';
+  font-family: 'ABCDiatypeMono-Regular','Courier New';
 }
 
 .helv {
-  font-family: 'Fellix-Light','Helvetica Neue';
+  font-family: 'ABCDiatype-Regular','Helvetica Neue';
 }
 
 .medium {
@@ -238,7 +239,7 @@ a {
         bottom: 0;
         background-color: currentColor;
         content: '';
-        @media (min-width: $mid) {
+        @media (min-width: 800px) {
           height: 6px;
         }
       }

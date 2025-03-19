@@ -10,6 +10,7 @@ import country from './types/country'
 import tag from './types/tags'
 import listing from './types/listing'
 import manufacturer from './types/manufacturer'
+import post from './documents/post'
 
 // Tabs
 import categoryContent from './tabs/categoryContent'
@@ -29,6 +30,9 @@ import material from './modules/fields/material'
 // Fields
 import origin from './modules/fields/origin'
 
+// Import the topBar schema
+import topBar from './documents/topBar'
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -42,6 +46,7 @@ export default createSchema({
     category,
     country,
     tag,
+    post,
     // Tabs
     categoryContent,
     manufacturerContent,
@@ -54,6 +59,7 @@ export default createSchema({
     location,
     material,
     // Fields
-    origin
+    origin,
+    topBar
   ])
 })

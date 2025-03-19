@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: Journal
+---
+
+<div class="container py2">
+  <h1 class="s48 mb2">Journal</h1>
+  
+  <div class="grid">
+    {% for post in posts %}
+      <article class="grid__item cs100 cs50@md mb2">
+        <a href="/journal/{{ post.slug.current }}" class="block">
+          {% if post.mainImage %}
+            <div class="mb1 rel pb56">
+              <img src="{{ post.mainImage }}?w=800" alt="{{ post.title }}" class="fit-cover abs x y"/>
+            </div>
+          {% endif %}
+          
+          <h2 class="s24 mb05">{{ post.title }}</h2>
+          
+          {% if post.publishedAt %}
+            <time class="block s14 mb05" datetime="{{ post.publishedAt }}">
+              {{ post.publishedAt | date("MMMM D, YYYY") }}
+            </time>
+          {% endif %}
+          
+          {% if post.excerpt %}
+            <p class="s16">{{ post.excerpt }}</p>
+          {% endif %}
+          
+          {% if post.categories.length %}
+            <div class="mt1">
+              {% for category in post.categories %}
+                <span class="tag">{{ category.title }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </a>
+      </article>
+    {% endfor %}
+  </div>
+</div> 

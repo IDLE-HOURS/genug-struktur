@@ -1,0 +1,38 @@
+---
+pagination:
+  data: posts
+  size: 1
+  alias: post
+permalink: "journal/{{ post.slug.current }}/"
+layout: layouts/base.njk
+---
+
+<article class="container py2">
+  <header class="mb2">
+    <h1 class="s48 mb1">{{ post.title }}</h1>
+    
+    {% if post.publishedAt %}
+      <time class="block s14 mb1" datetime="{{ post.publishedAt }}">
+        {{ post.publishedAt | date("MMMM D, YYYY") }}
+      </time>
+    {% endif %}
+    
+    {% if post.categories.length %}
+      <div class="mb1">
+        {% for category in post.categories %}
+          <span class="tag">{{ category.title }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if post.mainImage %}
+      <div class="rel pb56">
+        <img src="{{ post.mainImage }}?w=1200" alt="{{ post.title }}" class="fit-cover abs x y"/>
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="prose">
+    {{ post.content | safe }}
+  </div>
+</article> 

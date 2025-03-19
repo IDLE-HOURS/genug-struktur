@@ -1,3 +1,19 @@
+<div class='top-bar fix x p0 m0 z5 f jcb aic left top bcw' data-component='top-bar'>
+  <div class='p05 px15 x top-bar__inner rel z1 f jcb aic'>
+    <a href="/about" class="top-bar__link">{{ topBar.leftLink.text }}</a>
+    {% if topBar.centerContent.link %}
+      {% set linkUrl = topBar.centerContent.link.type === 'external' ? 
+        topBar.centerContent.link.external : 
+        '/' + topBar.centerContent.link.internalReference.content.main.slug.current %}
+      <a href="{{ linkUrl }}" class="top-bar__message top-bar__message--link">
+        {{ topBar.centerContent.text }}
+      </a>
+    {% else %}
+      <p class="top-bar__message">{{ topBar.centerContent.text }}</p>
+    {% endif %}
+    <a href="/blog" class="top-bar__link">{{ topBar.rightLink.text }}</a>
+  </div>
+</div>
 <header class='header fix x p0 m0 z4 f jcc aic left top bcw' data-component='header'>
   <div class='p05 px15 x header__inner rel z1'>
     <div class='nav f jcb rel aic'>

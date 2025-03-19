@@ -33,7 +33,6 @@
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %} data-component='theme'>
     <div class="">
-      {% include "screensaver.njk" %}
       {% include "header.njk" %}
       <main role='main' class='main' id='root'>
         {{ content | safe }}
