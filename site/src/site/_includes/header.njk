@@ -2,9 +2,11 @@
   <div class='p05 px15 x top-bar__inner rel z1 f jcb aic'>
     <a href="/about" class="top-bar__link">{{ topBar.leftLink.text }}</a>
     {% if topBar.centerContent.link %}
-      {% set linkUrl = topBar.centerContent.link.type === 'external' ? 
-        topBar.centerContent.link.external : 
-        '/' + topBar.centerContent.link.internalReference.content.main.slug.current %}
+      {% if topBar.centerContent.link.type == 'external' %}
+        {% set linkUrl = topBar.centerContent.link.external %}
+      {% else %}
+        {% set linkUrl = '/' + topBar.centerContent.link.internalReference.content.main.slug.current %}
+      {% endif %}
       <a href="{{ linkUrl }}" class="top-bar__message top-bar__message--link">
         {{ topBar.centerContent.text }}
       </a>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/bundle/css/styles.css" />
 
     {% include "seo.njk" %}
-    <title>{{ renderData.title or title }}</title>
+    <title>{% if renderData.title %}{{ renderData.title }}{% elif title %}{{ title }}{% else %}Enough Structures{% endif %}</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119331416-2"></script>
     <script>

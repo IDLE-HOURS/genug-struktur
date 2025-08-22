@@ -25,6 +25,7 @@ module.exports = function(config) {
   // Add some utility filters
   config.addFilter("squash", require("./src/utils/filters/squash.js") );
   config.addFilter("dateDisplay", require("./src/utils/filters/date.js") );
+  config.addFilter("date", require("./src/utils/filters/date.js") );
 
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
