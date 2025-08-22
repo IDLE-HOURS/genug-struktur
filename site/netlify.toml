@@ -6,6 +6,9 @@
   publish = "dist"
   functions = "./functions"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 [dev]
   command = "npm run start"
   port = 8888
