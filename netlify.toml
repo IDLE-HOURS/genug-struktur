@@ -2,6 +2,7 @@
   package = "@netlify/plugin-functions-install-core"
 
 [build]
+  base = "site"
   command = "npm run build && netlify-lambda build src/lambda"
   publish = "dist"
   functions = "./functions"
