@@ -2,22 +2,18 @@
   package = "@netlify/plugin-functions-install-core"
 
 [build]
-  command = "npm run build  && netlify-lambda build src/lambda"
+  command = "npm run build && netlify-lambda build src/lambda"
   publish = "dist"
   functions = "./functions"
 
 [build.environment]
   NODE_VERSION = "18"
-  NETLIFY_USE_YARN = "false"
-
-[build.processing]
-  skip_processing = false
 
 [dev]
   command = "npm run start"
   port = 8888
   targetPort = 8080
-  publish= "site/build"
+  publish = "dist"
 
 [[redirects]]
   from = "/api/*"
