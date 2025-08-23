@@ -86,7 +86,7 @@
       transition: all 0.3s ease-in-out;
     }
     a:hover {
-      color: var(--orange);
+      color: var(--litegreen);
     }
   }
   .newsletter {
