@@ -10,7 +10,7 @@ import bag from './components/bag.js'
 import listings from './components/listings.js'
 import header from './components/header.js'
 import criteria from './components/criteria.js'
-import submit from './components/submit.js'
+import inquire from './components/inquire.js'
 import contributions from './components/contributions.js'
 import filters from './components/filters.js'
 import listingCard from './components/listing-card.js'
@@ -31,7 +31,7 @@ const components = {
   listings,
   criteria,
   listingCard,
-  submit,
+  inquire,
   contributions,
   footer,
   screensaver,

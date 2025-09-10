@@ -34,6 +34,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "@friendsof/spaghetti": "^1.4.1",
     "@octokit/core": "^3.4.0",
+    "@sanity/block-content-to-html": "^2.0.0",
     "@sanity/block-content-to-markdown": "^0.0.5",
     "@sanity/client": "^1.150.7",
     "astrochimp": "^1.0.1",

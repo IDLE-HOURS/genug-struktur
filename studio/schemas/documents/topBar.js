@@ -9,18 +9,77 @@ export default {
       type: 'object',
       fields: [
         {
-          name: 'text',
-          title: 'Text',
+          name: 'richText',
+          title: 'Rich Text Content',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+              styles: [
+                { title: 'Normal', value: 'normal' }
+              ],
+              lists: [],
+              marks: {
+                decorators: [
+                  { title: 'Strong', value: 'strong' },
+                  { title: 'Emphasis', value: 'em' }
+                ],
+                annotations: [
+                  {
+                    name: 'internalLink',
+                    type: 'object',
+                    title: 'Internal Link',
+                    fields: [
+                      {
+                        name: 'reference',
+                        type: 'reference',
+                        title: 'Link to',
+                        to: [
+                          { type: 'post' },
+                          { type: 'category' },
+                          { type: 'listing' },
+                          { type: 'manufacturer' }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    name: 'link',
+                    type: 'object',
+                    title: 'External Link',
+                    fields: [
+                      {
+                        name: 'href',
+                        type: 'url',
+                        title: 'URL'
+                      },
+                      {
+                        title: 'Open in new tab',
+                        name: 'blank',
+                        type: 'boolean'
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          description: 'Rich text content for the top bar center - supports inline links to internal pages and external URLs'
+        },
+        {
+          name: 'fallbackText',
+          title: 'Fallback Text',
           type: 'string',
-          description: 'The message to display in the center of the top bar'
+          description: 'Simple text fallback (used if rich text is empty)'
         },
         {
           name: 'link',
-          title: 'Link',
+          title: 'Overall Link (Legacy)',
           type: 'object',
+          description: 'Legacy link option - use rich text inline links instead',
           options: {
             collapsible: true,
-            collapsed: false
+            collapsed: true
           },
           fields: [
             {

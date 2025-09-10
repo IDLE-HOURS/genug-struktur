@@ -28,6 +28,26 @@
         color: var(--orange);
       }
     }
+    &--rich {
+      /* Rich text content styling */
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          color: var(--orange);
+          text-decoration-color: var(--orange);
+        }
+      }
+      strong {
+        font-weight: 600;
+      }
+      em {
+        font-style: italic;
+      }
+    }
   }
   &__link {
     font-size: 0.875rem;
@@ -50,13 +70,26 @@
   position: relative;
   z-index: 4;
   background: white;
-  &__logo {
+  /* &__logo {
     max-width: 226px;
     position: relative;
     top: 5px;
     svg {
       width: 100%;
       height: auto;
+    }
+  } */
+  &__title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-align: left;
+    &-line {
+      font-size: 1.5rem;
+      font-weight: bold;
+      @media (min-width: 800px) {
+        font-size: 2rem;
+      }
     }
   }
   &__nav {

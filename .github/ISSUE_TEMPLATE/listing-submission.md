@@ -1,6 +1,6 @@
 ---
 name: Listing Submission
-about: Submit a new listing to Waste Not
+about: Submit and inquiry
 title: ''
 labels: listing
 assignees: ''
@@ -48,7 +48,6 @@ Include an additional description here to clarify any of the information below
 * * *
 - [ ] Biodegradable
 - [ ] Compostable
-- [ ] Home Compostable
 - [ ] Renewed Material
 - [ ] Bio Based
 - [ ] regenerative

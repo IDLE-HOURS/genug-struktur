@@ -10,7 +10,6 @@ export default {
       { value: 'biodegredable', title: 'BAD FIX' },
       { value: 'biodegradable', title: 'Biodegradable' },
       { value: 'compostable', title: 'Compostable' },
-      { value: 'home-compostable', title: 'Home Compostable' },
       { value: 'renewed-material', title: 'Renewed Material' },
       { value: 'bio-based', title: 'Bio-Based' },
       { value: 'regenerative', title: 'regenerative' },

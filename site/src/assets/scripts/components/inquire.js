@@ -15,7 +15,7 @@ function encode(data) {
 }
 
 export default component((node) => {
-  const selectMain = node.querySelector('.js-submit-view')
+  const selectMain = node.querySelector('.js-inquire-view')
   const selectMin = node.querySelector('.js-mins')
 
   const views = node.querySelectorAll('.js-view')
@@ -43,11 +43,11 @@ export default component((node) => {
 
   const supplierForm = supplier.querySelector('form')
 
-  supplierForm.addEventListener('submit', e => {
+  supplierForm.addEventListener('inquire', e => {
     e.preventDefault()
 
     const formFields = `{${encode(e.currentTarget.elements)}}`
-    fetch('https://api.staticforms.xyz/submit', {
+    fetch('https://api.staticforms.xyz/inquire', {
       method: 'POST',
       body: formFields,
       headers: { 'Content-Type': 'application/json' }
@@ -62,7 +62,7 @@ export default component((node) => {
 
   const gitHubForm = help.querySelector('form')
 
-  gitHubForm.addEventListener('submit', e => {
+  gitHubForm.addEventListener('inquire', e => {
     e.preventDefault()
 
     const formFields = `{${encode(e.currentTarget.elements)}}`

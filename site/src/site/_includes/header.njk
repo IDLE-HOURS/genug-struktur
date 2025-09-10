@@ -1,7 +1,11 @@
 <div class='top-bar fix x p0 m0 z5 f jcb aic left top bcw' data-component='top-bar'>
   <div class='p05 px15 x top-bar__inner rel z1 f jcb aic'>
     <a href="/about" class="top-bar__link">{{ topBar.leftLink.text }}</a>
-    {% if topBar.centerContent.link %}
+    {% if topBar.centerContent.richTextHTML %}
+      <div class="top-bar__message top-bar__message--rich">
+        {{ topBar.centerContent.richTextHTML | safe }}
+      </div>
+    {% elif topBar.centerContent.link %}
       {% if topBar.centerContent.link.type == 'external' %}
         {% set linkUrl = topBar.centerContent.link.external %}
       {% else %}
@@ -21,18 +25,21 @@
     <div class='nav f jcb rel aic'>
       <div>
         <a class='caps header__logo cg' href='/'>
-          {% include 'logo.njk' %}
+          <div class="header__title">
+            <div class="header__title-line">ENOUGH</div>
+            <div class="header__title-line">STRUCTURES</div>
+          </div>
         </a>
       </div>
       <ul class="f jcs aic header__nav">
         <li class='mr1'>
-          <a href="/listings" class='bold s20'>Listings</a>
+          <a href="/catalog" class='bold s20'>Catalog</a>
         </li>
         <li class='ml1 mr1'>
-          <a href="/submit" class='bold s20'>Submit</a>
+          <a href="/inquire" class='bold s20'>Inquire</a>
         </li>
         <li class='ml1'>
-          <a href="/mission" class='bold s20'>Mission</a>
+          <a href="/roadmap" class='bold s20'>Roadmap</a>
         </li>
       </ul>
       <button class='header__nav-toggle f jcb aic fdc js-nav-toggle' aria-label='Toggle Navigation'>
@@ -43,16 +50,16 @@
   </div>
   <div class='header__mobile fix bcw x y left top js-mobile-header'>
     <div class='p15 al bcw mt1'>
-      <a href='/listings' class='s32 f jcb aic cg mt1 py05 header__mobile-link'>
-        Listings
+      <a href='/catalog' class='s32 f jcb aic cg mt1 py05 header__mobile-link'>
+        Catalog
         <svg width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M19 6.50189C19 6.35186 18.9288 6.22932 18.8443 6.14931L12.511 0.148142C12.3526 -0.00938927 12.1336 -0.0343918 11.9383 0.0406223C11.7483 0.113137 11.6138 0.303177 11.6111 0.498215L11.6111 3.4988L0.527776 3.4988C0.250694 3.4988 -5.50491e-07 3.73634 -5.88947e-07 3.99889L-1.32144e-06 8.99987C-1.3599e-06 9.26242 0.250693 9.49996 0.527775 9.49996L11.6111 9.49997L11.6111 12.5005C11.6137 12.6956 11.7483 12.8831 11.9383 12.9581C12.1283 13.0332 12.3315 13.0132 12.511 12.8506L18.8443 6.84946C18.934 6.76194 18.9974 6.64441 19 6.50189ZM17.7307 6.50189L12.6667 11.2978L12.6667 8.99987C12.6667 8.73732 12.416 8.49977 12.1389 8.49977L1.05555 8.49977L1.05555 4.49899L12.1389 4.49899C12.416 4.49899 12.6667 4.26145 12.6667 3.9989L12.6667 1.70095L17.7307 6.50189Z" fill="black"/></svg>
       </a>
-      <a href='/mission' class='s32 f jcb aic cg py05 header__mobile-link'>
-        Mission
+      <a href='/roapmap' class='s32 f jcb aic cg py05 header__mobile-link'>
+        Roadmap
         <svg width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M19 6.50189C19 6.35186 18.9288 6.22932 18.8443 6.14931L12.511 0.148142C12.3526 -0.00938927 12.1336 -0.0343918 11.9383 0.0406223C11.7483 0.113137 11.6138 0.303177 11.6111 0.498215L11.6111 3.4988L0.527776 3.4988C0.250694 3.4988 -5.50491e-07 3.73634 -5.88947e-07 3.99889L-1.32144e-06 8.99987C-1.3599e-06 9.26242 0.250693 9.49996 0.527775 9.49996L11.6111 9.49997L11.6111 12.5005C11.6137 12.6956 11.7483 12.8831 11.9383 12.9581C12.1283 13.0332 12.3315 13.0132 12.511 12.8506L18.8443 6.84946C18.934 6.76194 18.9974 6.64441 19 6.50189ZM17.7307 6.50189L12.6667 11.2978L12.6667 8.99987C12.6667 8.73732 12.416 8.49977 12.1389 8.49977L1.05555 8.49977L1.05555 4.49899L12.1389 4.49899C12.416 4.49899 12.6667 4.26145 12.6667 3.9989L12.6667 1.70095L17.7307 6.50189Z" fill="black"/></svg>
       </a>
-      <a href='/submit' class='s32 f jcb aic cg py05 header__mobile-link'>
-        Submit
+      <a href='/inquire' class='s32 f jcb aic cg py05 header__mobile-link'>
+        Inquire
         <svg width="19" height="13" viewBox="0 0 19 13" fill="none"><path d="M19 6.50189C19 6.35186 18.9288 6.22932 18.8443 6.14931L12.511 0.148142C12.3526 -0.00938927 12.1336 -0.0343918 11.9383 0.0406223C11.7483 0.113137 11.6138 0.303177 11.6111 0.498215L11.6111 3.4988L0.527776 3.4988C0.250694 3.4988 -5.50491e-07 3.73634 -5.88947e-07 3.99889L-1.32144e-06 8.99987C-1.3599e-06 9.26242 0.250693 9.49996 0.527775 9.49996L11.6111 9.49997L11.6111 12.5005C11.6137 12.6956 11.7483 12.8831 11.9383 12.9581C12.1283 13.0332 12.3315 13.0132 12.511 12.8506L18.8443 6.84946C18.934 6.76194 18.9974 6.64441 19 6.50189ZM17.7307 6.50189L12.6667 11.2978L12.6667 8.99987C12.6667 8.73732 12.416 8.49977 12.1389 8.49977L1.05555 8.49977L1.05555 4.49899L12.1389 4.49899C12.416 4.49899 12.6667 4.26145 12.6667 3.9989L12.6667 1.70095L17.7307 6.50189Z" fill="black"/></svg>
       </a>
     </div>

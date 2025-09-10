@@ -4,7 +4,7 @@ import astrochimp from 'astrochimp'
 
 export default component((node) => {
   const form = node.querySelector('form')
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('inquire', (e) => {
     e.preventDefault()
 
     const success = node.querySelector('.js-spaghetti')

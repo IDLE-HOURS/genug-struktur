@@ -68,7 +68,7 @@ export default component((node) => {
 
   const mistakeForm = mistake.querySelector('form')
 
-  mistakeForm.addEventListener('submit', e => {
+  mistakeForm.addEventListener('inquire', e => {
     e.preventDefault()
     const formFields = `{${encode(e.currentTarget.elements)}}`
     fetch('/.netlify/functions/github-listing', {
@@ -93,7 +93,7 @@ export default component((node) => {
 
   const questionableForm = questionable.querySelector('form')
 
-  questionableForm.addEventListener('submit', e => {
+  questionableForm.addEventListener('inquire', e => {
     e.preventDefault()
 
     const formFields = `{${encode(e.currentTarget.elements)}}`

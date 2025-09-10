@@ -3,40 +3,51 @@ layout: layouts/base.njk
 title: Journal
 ---
 
-<div class="container py2">
-  <h1 class="s48 mb2">Journal</h1>
+<div class="container py2 journal">
+  <header class="journal__header">
+    <h1 class="s48">Journal</h1>
+    <p class="journal__header-subtitle">Thoughts, insights, and stories from our journey</p>
+  </header>
   
-  <div class="grid">
-    {% for post in posts %}
-      <article class="grid__item cs100 cs50@md mb2">
-        <a href="/journal/{{ post.slug.current }}" class="block">
-          {% if post.mainImage %}
-            <div class="mb1 rel pb56">
-              <img src="{{ post.mainImage }}?w=800" alt="{{ post.title }}" class="fit-cover abs x y"/>
+  {% if posts.length %}
+    <div class="journal__grid">
+      {% for post in posts %}
+        <article class="journal__post">
+          <a href="/journal/{{ post.slug.current }}" class="block">
+            {% if post.mainImage %}
+              <div class="journal__post-image rel pb56">
+                <img src="{{ post.mainImage }}?w=800" alt="{{ post.title }}" class="fit-cover abs x y"/>
+              </div>
+            {% endif %}
+            
+            <div class="journal__post-content">
+              <h2 class="journal__post-title s24">{{ post.title }}</h2>
+              
+              {% if post.publishedAt %}
+                <time class="journal__post-date" datetime="{{ post.publishedAt }}">
+                  {{ post.publishedAt | date("MMMM D, YYYY") }}
+                </time>
+              {% endif %}
+              
+              {% if post.excerpt %}
+                <p class="journal__post-excerpt">{{ post.excerpt }}</p>
+              {% endif %}
+              
+              {% if post.categories.length %}
+                <div class="journal__post-categories">
+                  {% for category in post.categories %}
+                    <span class="tag">{{ category.title }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
             </div>
-          {% endif %}
-          
-          <h2 class="s24 mb05">{{ post.title }}</h2>
-          
-          {% if post.publishedAt %}
-            <time class="block s14 mb05" datetime="{{ post.publishedAt }}">
-              {{ post.publishedAt | date("MMMM D, YYYY") }}
-            </time>
-          {% endif %}
-          
-          {% if post.excerpt %}
-            <p class="s16">{{ post.excerpt }}</p>
-          {% endif %}
-          
-          {% if post.categories.length %}
-            <div class="mt1">
-              {% for category in post.categories %}
-                <span class="tag">{{ category.title }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </a>
-      </article>
-    {% endfor %}
-  </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="journal__empty">
+      <p class="journal__empty-message">No journal entries yet. Check back soon for updates!</p>
+    </div>
+  {% endif %}
 </div> 

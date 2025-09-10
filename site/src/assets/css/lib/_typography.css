@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'Gerstner';
+  src: url('/../site/fonts/GerstnerProgrammFSL-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'ABCDiatype-Regular';
   src: url('/../site/fonts/ABCDiatype-Regular.woff') format('woff'),
        url('/../site/fonts/ABCDiatype-Regular.woff2') format('woff2');
@@ -17,7 +25,7 @@
 }
 
 body {
-  font-family: 'ABCDiatype-Regular','Helvetica Neue';
+  font-family: 'Gerstner','Helvetica Neue';
   text-align: center;
   font-size: 14px;
   line-height: 1.8;
@@ -25,11 +33,11 @@ body {
 }
 
 .serif {
-  font-family: 'ABCDiatypeMono-Regular','Courier New';
+  font-family: 'Gerstner','Courier New';
 }
 
 .helv {
-  font-family: 'ABCDiatype-Regular','Helvetica Neue';
+  font-family: 'Gerstner','Helvetica Neue';
 }
 
 .medium {

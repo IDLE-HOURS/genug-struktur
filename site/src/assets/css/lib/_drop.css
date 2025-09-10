@@ -95,7 +95,7 @@ select {
   border: 0;
   z-index: 10;
   background-color: transparent;
-  .submit & {
+  .inquire & {
     max-width: 560px;
     background-color: white;
   }
